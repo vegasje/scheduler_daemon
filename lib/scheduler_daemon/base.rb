@@ -57,7 +57,7 @@ module Scheduler
     def load_rails_env
       if File.exists?('config/environment.rb') && !@options['skip_rails']
         log("loading rails environment")
-        require File.expand_path('./config/environment')
+        require File.expand_path('./config/environments')
         @env_name = ::Rails.env
       end
     rescue
